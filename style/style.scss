@@ -1,0 +1,129 @@
+@import "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: $main-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    @media (min-width: 48rem) {
+        padding: 0;
+    }
+}
+
+main {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerText {
+    width: 100%;
+    @media (min-width: 48rem) {
+        width: min(100%, 31.25rem);
+    }
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 1.8rem;
+    color: $secondary;
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+    color: $primary;
+}
+
+h3 {
+    margin-top: 1rem;
+    color: $secondary;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    color: $primary;
+}
+
+p {
+    margin-top: 0.5rem;
+    color: $secondary;
+    line-height: 1.5;
+}
+
+.cardSection {
+    margin-top: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "supervisor"
+        "teamBuilder"
+        "karma"
+        "calculator";
+    @media (min-width: 48rem) {
+        width: min(90%, 69.375rem);
+        grid-template-areas:
+            ". teamBuilder ."
+            "supervisor teamBuilder calculator"
+            "supervisor karma calculator"
+            ". karma .";
+    }
+}
+
+.card {
+    width: 100%;
+    padding: 2rem;
+    background-color: $third;
+    text-align: left;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @media (min-width: 48rem) {
+        width: min(100%, 21.875rem);
+    }
+}
+
+.card img {
+    float: right;
+    margin-top: 3rem;
+}
+.supervisor {
+    grid-area: supervisor;
+    border-top: 0.5rem solid $highlight1;
+}
+
+.teamBuilder {
+    grid-area: teamBuilder;
+    border-top: 0.5rem solid $highlight2;
+}
+
+.karma {
+    grid-area: karma;
+    border-top: 0.5rem solid $highlight3;
+}
+
+.calculator {
+    grid-area: calculator;
+    border-top: 0.5rem solid $highlight4;
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

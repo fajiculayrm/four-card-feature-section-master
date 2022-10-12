@@ -28,30 +28,29 @@ main {
   align-items: center;
 }
 
-.bannerText {
-  width: 100%;
+header {
+  width: 90%;
 }
 @media (min-width: 48rem) {
-  .bannerText {
-    width: min(100%, 31.25rem);
+  header {
+    width: min(90%, 31.25rem);
   }
 }
 
 h1 {
+  text-align: center;
   font-weight: 200;
   font-size: 1.8rem;
   color: hsl(229deg, 6%, 66%);
 }
-
-h2 {
+h1 span:nth-child(1) {
+  display: inline-block;
   margin-top: 0.5rem;
-  font-size: 1.8rem;
   color: hsl(234deg, 12%, 34%);
 }
-
-h3 {
+h1 span:nth-child(2) {
+  display: inline-block;
   margin-top: 1rem;
-  color: hsl(229deg, 6%, 66%);
   font-weight: 400;
   font-size: 1.2rem;
 }
@@ -67,20 +66,20 @@ p {
   line-height: 1.5;
 }
 
-.cardSection {
+section {
   margin-top: 3rem;
   display: grid;
   gap: 1rem;
   grid-template-areas: "supervisor" "teamBuilder" "karma" "calculator";
 }
 @media (min-width: 48rem) {
-  .cardSection {
+  section {
     width: min(90%, 69.375rem);
     grid-template-areas: ". teamBuilder ." "supervisor teamBuilder calculator" "supervisor karma calculator" ". karma .";
   }
 }
 
-.card {
+div {
   width: 100%;
   padding: 2rem;
   background-color: hsl(0deg, 0%, 98%);
@@ -89,12 +88,12 @@ p {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 @media (min-width: 48rem) {
-  .card {
+  div {
     width: min(100%, 21.875rem);
   }
 }
 
-.card img {
+div img {
   float: right;
   margin-top: 3rem;
 }
